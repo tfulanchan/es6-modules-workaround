@@ -1,11 +1,9 @@
 // TODO: Add your import statements here.
-import { getRoles, getCompanies, getDataByRole, getDataByCompany } from 'salaryData.js';
-import salaryData from 'salaryData.js';
-import {getAverageSalaryByRole, getAverageSalaryByCompany, getSalaryAtCompany, getIndustryAverageSalary} from 'workAroundModule.js';
+ 
 
 // TODO: Get the companies and roles using the salaryData module.
-const companies = getCompanies();
-const roles = getRoles();
+const companies = [];
+const roles = [];
 
 // Create input buttons for every company and role represented in the data.
 renderInputButtons(companies, 'company');
@@ -56,10 +54,10 @@ function updateResults(){
   if (!company || !role) { return; }
 
   // TODO: Use the workAroundModule functions to calculate the needed data.
-  const averageSalaryByRole = getAverageSalaryByRole(role);
-  const averageSalaryByCompany = getAverageSalaryByCompany(company);
-  const salary = getSalaryAtCompany(role, company);
-  const industryAverageSalary = getIndustryAverageSalary();
+  const averageSalaryByRole = 0;
+  const averageSalaryByCompany = 0;
+  const salary = 0;
+  const industryAverageSalary = 0;
 
   // Render them to the screen.
   document.getElementById('salarySelected').innerText = `The salary for ${role}s at ${company} is \$${salary}`;
@@ -67,6 +65,3 @@ function updateResults(){
   document.getElementById('salaryAverageByCompany').innerText = `The average salary at ${company} is \$${averageSalaryByCompany}`;
   document.getElementById('salaryAverageIndustry').innerText = `The average salary in the Tech industry is \$${industryAverageSalary}`;
 }
-
-
-
